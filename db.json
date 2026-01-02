@@ -1,1 +1,24 @@
-{}
+{
+  "usuarios": [
+    {
+      "id": "125a",
+      "usuario": "user",
+      "senha": "user"
+    }
+  ],
+  "transacoes": [
+    {
+      "id": "af97",
+      "userId": "125a",
+      "descricao": "Salário",
+      "tipo": "Receita",
+      "metodo": "Transferência",
+      "valor": "2000.00",
+      "data": "2026-01-01"
+    }
+  ],
+  "tiposTransacao": [
+    "Receita",
+    "Despesa"
+  ]
+}
