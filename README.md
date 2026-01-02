@@ -44,8 +44,6 @@ No terminal que você deseja rodar o json-server, digite o seguinte comando:
 
 No terminal que você deseja rodar a aplicação, digite os seguintes comandos:
 
-`cd app`
-
 `npm start`
 
 ### 4. Abrir a aplicação em um navegador
