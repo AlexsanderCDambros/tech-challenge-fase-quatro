@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Login } from './page/login/login';
 import { Cadastrar } from './page/cadastrar/cadastrar';
+import { loggedGuard } from './guards/logged-guard';
 
 const routes: Routes = [
   {
@@ -11,11 +12,17 @@ const routes: Routes = [
   },
   {
     path: 'autenticar',
-    component: Login
+    component: Login,
+    canActivate: [
+      loggedGuard
+    ]
   },
   {
     path: 'cadastrar',
-    component: Cadastrar
+    component: Cadastrar,
+    canActivate: [
+      loggedGuard
+    ]
   }
 ];
 
