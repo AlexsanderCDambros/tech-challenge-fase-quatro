@@ -1,17 +1,23 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { Usuario } from '../interfaces/usuario';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ContextoStore {
-  private idUsuario: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  private usuario: BehaviorSubject<Usuario> = new BehaviorSubject<Usuario>({} as Usuario);
 
-  setIdUsuario(id: string) {
-    this.idUsuario.next(id);
+  setUsuario(usuario: Usuario) {
+    this.usuario.next(usuario);
   }
 
-  getIdUsuario() {
-    return this.idUsuario.asObservable();
+  getUsuario() {
+    return this.usuario.asObservable();
+  }
+
+  public efetuarLogin(user: Usuario): void {
+    this.setUsuario(user);
+    sessionStorage.setItem('token', btoa('UsuárioAutorizado'));
   }
 }
