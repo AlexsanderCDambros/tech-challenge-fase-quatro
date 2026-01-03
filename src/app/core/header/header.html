@@ -1,4 +1,26 @@
 @if ((contextoStore.getUsuario$() | async)?.id) {
-  <p>header works!</p>
-}
+<div class="header-container">
+  <div class="left-header">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
+      <mat-icon>menu</mat-icon>
+    </button>
 
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="navigateTo('/inicio')">
+        <mat-icon>home</mat-icon>
+        <span>Início</span>
+      </button>
+      <button mat-menu-item (click)="navigateTo('/transacoes')">
+        <mat-icon>receipt</mat-icon>
+        <span>Extrato</span>
+      </button>
+    </mat-menu>
+
+    <h1 class="ml-4">Tech Challenge 4</h1>
+  </div>
+
+  <button mat-icon-button aria-label="Sair" (click)="contextoStore.efetuarLogout(); navigateTo('/login');">
+    <mat-icon>logout</mat-icon>
+  </button>
+</div>
+}
