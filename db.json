@@ -18,7 +18,13 @@
     }
   ],
   "tiposTransacao": [
-    "Receita",
-    "Despesa"
+    {
+      "id": "1",
+      "tipo": "Receita"
+    },
+    {
+      "id": "2",
+      "tipo": "Despesa"
+    }
   ]
 }

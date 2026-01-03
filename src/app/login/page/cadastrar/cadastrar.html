@@ -1,1 +1,35 @@
-<p>cadastrar works!</p>
+<div class="login-container">
+  <mat-card>
+    <h1>Cadastro de usuário</h1>
+    <form class="login-form" novalidate [formGroup]="form">
+      <mat-form-field appearance="outline">
+        <mat-label>Usuário</mat-label>
+        <input matInput type="text" formControlName="usuario" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input matInput type="password" formControlName="senha" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Confirmar Senha</mat-label>
+        <input matInput type="password" formControlName="confirmarSenha" />
+      </mat-form-field>
+
+      @if (carregando()) {
+        <div class="loading-message">
+          Autenticando...
+        </div>
+      }
+      @if (erro()) {
+        <div class="error-message">
+          {{ erro() }}
+        </div>
+      }
+    </form>
+    <div class="actions">
+      <button matButton="filled" (click)="cadastrar()" [disabled]="form.invalid">Cadastrar</button>
+    </div>
+  </mat-card>
+</div>
