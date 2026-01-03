@@ -10,11 +10,10 @@ export const loginGuard: CanActivateFn = (route, state) => {
   const token = sessionStorage.getItem('token');
   const usuario = contextoStore.getUsuario();
 
-  if (!usuario.id){
-    contextoStore.efetuarLogout();
-  }
-
   if (token) {
+    if (!usuario.id){
+      contextoStore.efetuarLogin(JSON.parse(atob(token)));
+    }
     return true;
   }
 

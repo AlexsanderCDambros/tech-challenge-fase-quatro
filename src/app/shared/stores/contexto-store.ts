@@ -22,7 +22,7 @@ export class ContextoStore {
 
   public efetuarLogin(user: Usuario): void {
     this.setUsuario(user);
-    sessionStorage.setItem('token', btoa('UsuárioAutorizado'));
+    sessionStorage.setItem('token', btoa(JSON.stringify(user)));
   }
 
   public efetuarLogout(): void {
