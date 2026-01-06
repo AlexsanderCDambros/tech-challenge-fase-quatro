@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { TransacoesRoutingModule } from './transacoes-routing-module';
 import { Extrato } from './pages/extrato/extrato';
+import { TransacaoComponent } from '../shared/components/transacao/transacao';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -11,7 +14,10 @@ import { Extrato } from './pages/extrato/extrato';
   ],
   imports: [
     CommonModule,
-    TransacoesRoutingModule
+    TransacoesRoutingModule,
+    TransacaoComponent,
+    MatButtonModule,
+    MatCardModule
   ]
 })
 export class TransacoesModule { }

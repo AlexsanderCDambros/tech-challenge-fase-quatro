@@ -1,0 +1,22 @@
+<div class="d-flex flex-row justify-sb">
+  <div class="d-flex flex-row justify-sb w-100">
+    <div class="d-flex flex-column gap-4">
+      <h3 class="text-16">{{ transacao()?.descricao }}</h3>
+      <p class="text-12">{{ transacao()?.metodo }}</p>
+    </div>
+    <div class="d-flex flex-column gap-4 align-end">
+      <p
+        class="text-16"
+        [class]="transacao()?.tipo === 'Receita' ? 'text-c-green' : 'text-c-red'"
+      >
+        {{ (transacao()?.tipo === "Receita" ? transacao()?.valor || 0 : (0-(transacao()?.valor || 0))) | currency:'BRL' }}
+      </p>
+      <p class="text-12">{{ transacao()?.data | date: 'dd/MM/yyyy' }}</p>
+    </div>
+  </div>
+  <div class="d-flex flex-row no-wrap gap-8 ml-16">
+    <button matButton>Editar</button>
+    <button matButton>Excluir</button>
+  </div>
+</div>
+

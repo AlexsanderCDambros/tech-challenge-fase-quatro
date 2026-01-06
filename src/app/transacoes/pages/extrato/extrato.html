@@ -1,1 +1,14 @@
-<p>extrato works!</p>
+
+<div class="d-flex flex-row justify-sb align-center mb-16">
+  <h2 class="text-20 ">Extrato</h2>
+  <button matButton="filled">Adicionar nova transação</button>
+</div>
+
+<mat-card>
+  <mat-card-content>
+    @for (transacao of transacoes(); track $index) {
+      <app-transacao [transacao]="transacao" />
+      <hr aria-hidden="true" class="mb-8 mt-4"/>
+    }
+  </mat-card-content>
+</mat-card>

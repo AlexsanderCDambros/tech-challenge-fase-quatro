@@ -5,6 +5,7 @@ import { InicioRoutingModule } from './inicio-routing-module';
 import { Inicio } from './page/inicio/inicio';
 import { MatCardModule } from '@angular/material/card';
 import { SaldoTotal } from '../shared/components/saldo-total/saldo-total';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { SaldoTotal } from '../shared/components/saldo-total/saldo-total';
     CommonModule,
     InicioRoutingModule,
     MatCardModule,
-    SaldoTotal
+    SaldoTotal,
+    MatButtonModule
   ]
 })
 export class InicioModule { }

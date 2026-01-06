@@ -62,7 +62,11 @@ body {
     align-items: center;
   }
 
-   .align-stretch {
+  .align-end {
+    align-items: end;
+  }
+
+  .align-stretch {
     align-items: stretch;
   }
 
@@ -70,8 +74,16 @@ body {
     justify-content: center;
   }
 
+  .justify-end {
+    justify-content: end;
+  }
+
   .justify-sb {
     justify-content: space-between;
+  }
+
+  .no-wrap {
+    flex-wrap: nowrap;
   }
 
   .w-100 {
@@ -86,12 +98,24 @@ body {
     gap: 1rem;
   }
 
+  .gap-4 {
+    gap: 0.5rem;
+  }
+
   .mb-8 {
     margin-bottom: 1rem;
   }
 
+  .mb-16 {
+    margin-bottom: 2rem;
+  }
+
   .mt-8 {
     margin-top: 1rem;
+  }
+
+  .mt-4 {
+    margin-top: 0.5rem;
   }
 
   .mr-8 {
@@ -100,6 +124,10 @@ body {
 
   .ml-8 {
     margin-left: 1rem;
+  }
+
+  .ml-16 {
+    margin-left: 2rem;
   }
 
   .m-8 {
@@ -136,6 +164,14 @@ body {
 
   .text-12 {
     font-size: 12px;
+  }
+
+  .text-c-red {
+    color: red;
+  }
+
+  .text-c-green {
+    color: green;
   }
 }
 /* You can add global styles to this file, and also import other style files */
