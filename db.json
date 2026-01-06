@@ -13,7 +13,7 @@
       "descricao": "Salário",
       "tipo": "Receita",
       "metodo": "Transferência",
-      "valor": "2000.00",
+      "valor": 2000.00,
       "data": "2026-01-01"
     }
   ],

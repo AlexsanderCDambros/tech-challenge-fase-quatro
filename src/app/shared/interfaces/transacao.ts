@@ -3,6 +3,6 @@ interface Transacao {
 		descricao: string;
 		tipo: string;
 		metodo: string;
-		valor: string;
+		valor: number;
 		data: string;
 }
