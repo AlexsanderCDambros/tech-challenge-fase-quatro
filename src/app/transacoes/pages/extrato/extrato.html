@@ -10,5 +10,16 @@
       <app-transacao [transacao]="transacao" />
       <hr aria-hidden="true" class="mb-8 mt-4"/>
     }
+
+    <mat-paginator #paginator
+      class="demo-paginator"
+      (page)="alterarPagina($event.pageIndex+1)"
+      [length]="qtdPaginas()"
+      [pageSize]="10"
+      [showFirstLastButtons]="true"
+      [pageIndex]="pagina()-1"
+      aria-label="Selecione a página">
+    </mat-paginator>
   </mat-card-content>
+
 </mat-card>

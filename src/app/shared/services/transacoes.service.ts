@@ -11,8 +11,12 @@ export class TransacoesService {
     private http: HttpClient
   ) {}
 
-  buscarTransacoesPorUsuario(idUsuario: string): Observable<Transacao[]> {
-    return this.http.get<Transacao[]>(`${environment.apiUrl}/transacoes?userId=${idUsuario}`);
+  buscarTransacoesPorUsuario(idUsuario: string, pagina?: number, porPagina?: number): Observable<{data: Transacao[], pages :number}> {
+    let url = `${environment.apiUrl}/transacoes?userId=${idUsuario}`;
+    if (pagina !== undefined && porPagina !== undefined) {
+      url += `&_page=${pagina}&_per_page=${porPagina}`;
+    }
+    return this.http.get<{data: Transacao[], pages :number}>(url);
   }
 
   buscarSaldoTotalPorUsuario(idUsuario: string): Observable<number> {

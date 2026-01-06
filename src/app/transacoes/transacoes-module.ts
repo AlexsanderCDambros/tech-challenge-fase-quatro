@@ -6,6 +6,7 @@ import { Extrato } from './pages/extrato/extrato';
 import { TransacaoComponent } from '../shared/components/transacao/transacao';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { MatCardModule } from '@angular/material/card';
     TransacoesRoutingModule,
     TransacaoComponent,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatPaginatorModule,
   ]
 })
 export class TransacoesModule { }
