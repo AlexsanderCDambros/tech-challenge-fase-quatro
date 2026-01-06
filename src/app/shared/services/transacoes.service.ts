@@ -12,7 +12,7 @@ export class TransacoesService {
   ) {}
 
   buscarTransacoesPorUsuario(idUsuario: string, pagina?: number, porPagina?: number): Observable<{data: Transacao[], pages :number}> {
-    let url = `${environment.apiUrl}/transacoes?userId=${idUsuario}`;
+    let url = `${environment.apiUrl}/transacoes?userId=${idUsuario}&_sort=-data`;
     if (pagina !== undefined && porPagina !== undefined) {
       url += `&_page=${pagina}&_per_page=${porPagina}`;
     }
