@@ -4,6 +4,11 @@
       "id": "125a",
       "usuario": "user",
       "senha": "user"
+    },
+    {
+      "id": "591a",
+      "usuario": "user2",
+      "senha": "user2"
     }
   ],
   "transacoes": [
@@ -13,8 +18,35 @@
       "descricao": "Salário",
       "tipo": "Receita",
       "metodo": "Transferência",
-      "valor": 2000.00,
+      "valor": 2000,
       "data": "2026-01-01"
+    },
+    {
+      "id": "af98",
+      "userId": "125a",
+      "descricao": "Aluguel",
+      "tipo": "Despesa",
+      "metodo": "Transferência",
+      "valor": 800,
+      "data": "2026-01-10"
+    },
+    {
+      "id": "af94",
+      "userId": "591a",
+      "descricao": "Salário",
+      "tipo": "Receita",
+      "metodo": "Transferência",
+      "valor": 5000,
+      "data": "2026-01-01"
+    },
+    {
+      "id": "af95",
+      "userId": "591a",
+      "descricao": "Aluguel",
+      "tipo": "Despesa",
+      "metodo": "Transferência",
+      "valor": 1200,
+      "data": "2026-01-10"
     }
   ],
   "tiposTransacao": [

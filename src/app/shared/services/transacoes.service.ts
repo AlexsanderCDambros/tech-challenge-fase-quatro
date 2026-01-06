@@ -18,7 +18,9 @@ export class TransacoesService {
   buscarSaldoTotalPorUsuario(idUsuario: string): Observable<number> {
     return this.http.get<Transacao[]>(`${environment.apiUrl}/transacoes?userId=${idUsuario}`)
       .pipe(
-        map(transacoes => transacoes.reduce((total, t) => total + t.valor, 0))
+        map(transacoes => transacoes.reduce((total, t) =>
+          total + (t.tipo === 'Receita' ? t.valor : (t.tipo === 'Despesa' ? -t.valor : 0))
+        , 0))
       );
   }
 
