@@ -6,6 +6,7 @@ import { InicioComponent } from './page/inicio/inicio.component';
 import { MatCardModule } from '@angular/material/card';
 import { SaldoTotalComponent } from '../shared/components/saldo-total/saldo-total.component';
 import { MatButtonModule } from '@angular/material/button';
+import { TransacoesModule } from '../transacoes/transacoes-module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { MatButtonModule } from '@angular/material/button';
     InicioRoutingModule,
     MatCardModule,
     SaldoTotalComponent,
-    MatButtonModule
+    MatButtonModule,
+    TransacoesModule
   ]
 })
 export class InicioModule { }

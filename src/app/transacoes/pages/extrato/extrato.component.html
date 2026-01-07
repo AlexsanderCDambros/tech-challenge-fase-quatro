@@ -1,6 +1,11 @@
 
-<div class="d-flex flex-row justify-sb align-center mb-16">
+<div
+  class="d-flex flex-row align-center mb-16"
+  [class]="apenasTransacoes() ? 'justify-end' : 'justify-sb'"
+>
+  @if (!apenasTransacoes()) {
   <h2 class="text-20 ">Extrato</h2>
+  }
   <button matButton="filled" routerLink="/transacoes/transacao">Adicionar nova transação</button>
 </div>
 
@@ -11,15 +16,17 @@
       <hr aria-hidden="true" class="mb-8 mt-4"/>
     }
 
-    <mat-paginator #paginator
-      class="demo-paginator"
-      (page)="alterarPagina($event.pageIndex+1)"
-      [length]="qtdPaginas()"
-      [pageSize]="10"
-      [showFirstLastButtons]="true"
-      [pageIndex]="pagina()-1"
-      aria-label="Selecione a página">
-    </mat-paginator>
+    @if (!apenasTransacoes()) {
+      <mat-paginator #paginator
+        class="demo-paginator"
+        (page)="alterarPagina($event.pageIndex+1)"
+        [length]="qtdItens()"
+        [pageSize]="qtdItensPorPagina()"
+        [showFirstLastButtons]="true"
+        [pageIndex]="pagina()-1"
+        aria-label="Selecione a página">
+      </mat-paginator>
+    }
   </mat-card-content>
 
 </mat-card>

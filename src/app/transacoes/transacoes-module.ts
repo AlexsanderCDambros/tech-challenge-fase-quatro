@@ -20,6 +20,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatButtonModule,
     MatCardModule,
     MatPaginatorModule,
+  ],
+  exports: [
+    ExtratoComponent
   ]
 })
 export class TransacoesModule { }

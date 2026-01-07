@@ -31,6 +31,105 @@
       "data": "2026-01-10T03:00:00.000Z"
     },
     {
+      "id": "af99",
+      "userId": "125a",
+      "descricao": "Supermercado",
+      "tipo": "Despesa",
+      "metodo": "Cartão de débito",
+      "valor": 150,
+      "data": "2026-01-12T03:00:00.000Z"
+    },
+    {
+      "id": "af100",
+      "userId": "125a",
+      "descricao": "Freelance",
+      "tipo": "Receita",
+      "metodo": "Transferência",
+      "valor": 500,
+      "data": "2026-01-15T03:00:00.000Z"
+    },
+    {
+      "id": "af101",
+      "userId": "125a",
+      "descricao": "Conta de luz",
+      "tipo": "Despesa",
+      "metodo": "Cartão de débito",
+      "valor": 120,
+      "data": "2026-01-20T03:00:00.000Z"
+    },
+    {
+      "id": "af102",
+      "userId": "125a",
+      "descricao": "Internet",
+      "tipo": "Despesa",
+      "metodo": "Cartão de débito",
+      "valor": 80,
+      "data": "2026-01-22T03:00:00.000Z"
+    },
+    {
+      "id": "af103",
+      "userId": "125a",
+      "descricao": "Cinema",
+      "tipo": "Despesa",
+      "metodo": "Cartão de crédito",
+      "valor": 60,
+      "data": "2026-01-25T03:00:00.000Z"
+    },
+    {
+      "id": "af104",
+      "userId": "125a",
+      "descricao": "Restaurante",
+      "tipo": "Despesa",
+      "metodo": "Cartão de crédito",
+      "valor": 90,
+      "data": "2026-01-28T03:00:00.000Z"
+    },
+    {
+      "id": "af105",
+      "userId": "125a",
+      "descricao": "Bônus trabalho",
+      "tipo": "Receita",
+      "metodo": "Transferência",
+      "valor": 300,
+      "data": "2026-02-01T03:00:00.000Z"
+    },
+    {
+      "id": "af106",
+      "userId": "125a",
+      "descricao": "Farmácia",
+      "tipo": "Despesa",
+      "metodo": "Cartão de débito",
+      "valor": 45,
+      "data": "2026-02-03T03:00:00.000Z"
+    },
+    {
+      "id": "af107",
+      "userId": "125a",
+      "descricao": "Combustível",
+      "tipo": "Despesa",
+      "metodo": "Cartão de crédito",
+      "valor": 200,
+      "data": "2026-02-05T03:00:00.000Z"
+    },
+    {
+      "id": "af108",
+      "userId": "125a",
+      "descricao": "Gym",
+      "tipo": "Despesa",
+      "metodo": "Cartão de débito",
+      "valor": 100,
+      "data": "2026-02-07T03:00:00.000Z"
+    },
+    {
+      "id": "af109",
+      "userId": "125a",
+      "descricao": "Roupas",
+      "tipo": "Despesa",
+      "metodo": "Cartão de crédito",
+      "valor": 250,
+      "data": "2026-02-10T03:00:00.000Z"
+    },
+    {
       "id": "af94",
       "userId": "591a",
       "descricao": "Salário",
@@ -47,6 +146,105 @@
       "metodo": "Transferência",
       "valor": 1200,
       "data": "2026-01-10T03:00:00.000Z"
+    },
+    {
+      "id": "af110",
+      "userId": "591a",
+      "descricao": "Supermercado",
+      "tipo": "Despesa",
+      "metodo": "Cartão de débito",
+      "valor": 350,
+      "data": "2026-01-12T03:00:00.000Z"
+    },
+    {
+      "id": "af111",
+      "userId": "591a",
+      "descricao": "Consultoria",
+      "tipo": "Receita",
+      "metodo": "Transferência",
+      "valor": 1500,
+      "data": "2026-01-15T03:00:00.000Z"
+    },
+    {
+      "id": "af112",
+      "userId": "591a",
+      "descricao": "Água e gás",
+      "tipo": "Despesa",
+      "metodo": "Cartão de débito",
+      "valor": 200,
+      "data": "2026-01-20T03:00:00.000Z"
+    },
+    {
+      "id": "af113",
+      "userId": "591a",
+      "descricao": "Escola",
+      "tipo": "Despesa",
+      "metodo": "Transferência",
+      "valor": 800,
+      "data": "2026-01-22T03:00:00.000Z"
+    },
+    {
+      "id": "af114",
+      "userId": "591a",
+      "descricao": "Viagem",
+      "tipo": "Despesa",
+      "metodo": "Cartão de crédito",
+      "valor": 1000,
+      "data": "2026-01-25T03:00:00.000Z"
+    },
+    {
+      "id": "af115",
+      "userId": "591a",
+      "descricao": "Restaurante",
+      "tipo": "Despesa",
+      "metodo": "Cartão de crédito",
+      "valor": 200,
+      "data": "2026-01-28T03:00:00.000Z"
+    },
+    {
+      "id": "af116",
+      "userId": "591a",
+      "descricao": "13º salário",
+      "tipo": "Receita",
+      "metodo": "Transferência",
+      "valor": 5000,
+      "data": "2026-02-01T03:00:00.000Z"
+    },
+    {
+      "id": "af117",
+      "userId": "591a",
+      "descricao": "Seguro carro",
+      "tipo": "Despesa",
+      "metodo": "Cartão de débito",
+      "valor": 300,
+      "data": "2026-02-03T03:00:00.000Z"
+    },
+    {
+      "id": "af118",
+      "userId": "591a",
+      "descricao": "Combustível",
+      "tipo": "Despesa",
+      "metodo": "Cartão de crédito",
+      "valor": 400,
+      "data": "2026-02-05T03:00:00.000Z"
+    },
+    {
+      "id": "af119",
+      "userId": "591a",
+      "descricao": "Médico",
+      "tipo": "Despesa",
+      "metodo": "Cartão de débito",
+      "valor": 180,
+      "data": "2026-02-07T03:00:00.000Z"
+    },
+    {
+      "id": "af120",
+      "userId": "591a",
+      "descricao": "Eletrônicos",
+      "tipo": "Despesa",
+      "metodo": "Cartão de crédito",
+      "valor": 600,
+      "data": "2026-02-10T03:00:00.000Z"
     }
   ]
 }
