@@ -1,52 +1,56 @@
 <mat-card>
   <mat-card-content class="card-content">
-    <form [formGroup]="form" novalidate>
-      <mat-form-field appearance="fill">
-        <mat-label>Tipo</mat-label>
-        <mat-select formControlName="tipo">
-          <mat-option value="Receita">Receita</mat-option>
-          <mat-option value="Despesa">Despesa</mat-option>
-        </mat-select>
-      </mat-form-field>
+    <div class="d-flex flex-column">
+      <form [formGroup]="form" novalidate>
+        <div class="d-flex flex-column">
+          <mat-form-field appearance="fill">
+            <mat-label>Tipo</mat-label>
+            <mat-select formControlName="tipo">
+              <mat-option value="Receita">Receita</mat-option>
+              <mat-option value="Despesa">Despesa</mat-option>
+            </mat-select>
+          </mat-form-field>
 
-      <mat-form-field appearance="fill">
-        <mat-label>Método</mat-label>
-        <mat-select formControlName="metodo">
-          <mat-option value="Cartão de crédito">Cartão de crédito</mat-option>
-          <mat-option value="Cartão de débito">Cartão de débito</mat-option>
-          <mat-option value="Dinheiro">Dinheiro</mat-option>
-          <mat-option value="Transferência">Transferência</mat-option>
-        </mat-select>
-      </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Método</mat-label>
+            <mat-select formControlName="metodo">
+              <mat-option value="Cartão de crédito">Cartão de crédito</mat-option>
+              <mat-option value="Cartão de débito">Cartão de débito</mat-option>
+              <mat-option value="Dinheiro">Dinheiro</mat-option>
+              <mat-option value="Transferência">Transferência</mat-option>
+            </mat-select>
+          </mat-form-field>
 
-      <mat-form-field appearance="fill">
-        <mat-label>Descrição</mat-label>
-        <input matInput formControlName="descricao" autocomplete="on" />
-      </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Descrição</mat-label>
+            <input matInput formControlName="descricao" autocomplete="on" />
+          </mat-form-field>
 
-      <mat-form-field appearance="fill">
-        <mat-label>Valor</mat-label>
-        <input
-          matInput
-          type="text"
-          [value]="displayAmount"
-          (input)="aoEditarValor($event)"
-          inputmode="numeric"
-          placeholder="R$ 0,00"
-        />
-      </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Valor</mat-label>
+            <input
+              matInput
+              type="text"
+              [value]="displayAmount"
+              (input)="aoEditarValor($event)"
+              inputmode="numeric"
+              placeholder="R$ 0,00"
+            />
+          </mat-form-field>
 
-      <mat-form-field appearance="fill">
-        <mat-label>Data</mat-label>
-        <input matInput [matDatepicker]="picker" formControlName="data" />
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-    </form>
+          <mat-form-field appearance="fill">
+            <mat-label>Data</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="data" />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </form>
 
-    <div class="acoes">
-      <button mat-stroked-button (click)="aoCancelar()">Cancelar</button>
-      <button mat-raised-button color="primary" (click)="aoSalvar()" [disabled]="form.invalid">Salvar</button>
+      <div class="acoes">
+        <button mat-stroked-button (click)="aoCancelar()">Cancelar</button>
+        <button mat-raised-button color="primary" (click)="aoSalvar()" [disabled]="form.invalid">Salvar</button>
+      </div>
     </div>
   </mat-card-content>
 </mat-card>
