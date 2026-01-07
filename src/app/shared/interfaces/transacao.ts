@@ -1,4 +1,5 @@
 export interface ITransacao {
+    id?: string;
 		userId: string;
 		descricao: string;
 		tipo: string;
