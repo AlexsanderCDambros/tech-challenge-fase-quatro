@@ -1,16 +1,16 @@
 import { Component, signal } from '@angular/core';
-import { UsuariosService } from '../../services/usuarios';
+import { UsuariosService } from '../../services/usuarios.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContextoStore } from '../../../shared/stores/contexto-store';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.html',
-  styleUrls: ['./login.scss'],
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss'],
   standalone: false,
 })
-export class Login {
+export class LoginComponent {
 
   public form: FormGroup;
 

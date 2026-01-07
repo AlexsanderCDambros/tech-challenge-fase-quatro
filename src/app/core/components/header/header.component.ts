@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ContextoStore } from '../../shared/stores/contexto-store';
 import { AsyncPipe } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { Router } from '@angular/router';
+import { ContextoStore } from '../../../shared/stores/contexto-store';
 
 @Component({
   selector: 'app-header',
@@ -14,10 +14,10 @@ import { Router } from '@angular/router';
     MatButtonModule,
     MatMenuModule
   ],
-  templateUrl: './header.html',
-  styleUrl: './header.scss',
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.scss',
 })
-export class Header {
+export class HeaderComponent {
 
   constructor(
     public contextoStore: ContextoStore,

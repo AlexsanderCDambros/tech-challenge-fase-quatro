@@ -1,19 +1,20 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { TransacoesService } from '../../../shared/services/transacoes.service';
 import { ContextoStore } from '../../../shared/stores/contexto-store';
+import { ITransacao } from '../../../shared/interfaces/transacao';
 
 @Component({
   selector: 'app-extrato',
-  templateUrl: './extrato.html',
-  styleUrl: './extrato.scss',
+  templateUrl: './extrato.component.html',
+  styleUrl: './extrato.component.scss',
   standalone: false
 })
-export class Extrato implements OnInit {
+export class ExtratoComponent implements OnInit {
 
   private transacoesService = inject(TransacoesService);
   private contextoStore = inject(ContextoStore);
 
-  public transacoes = signal<Transacao[]>([]);
+  public transacoes = signal<ITransacao[]>([]);
   public pagina = signal<number>(1);
   public qtdPaginas = signal<number>(0);
 

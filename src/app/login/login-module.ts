@@ -7,14 +7,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 
 import { LoginRoutingModule } from './login-routing-module';
-import { Login } from './page/login/login';
-import { Cadastrar } from './page/cadastrar/cadastrar';
+import { LoginComponent } from './page/login/login.component';
+import { CadastrarComponent } from './page/cadastrar/cadastrar.component';
 
 
 @NgModule({
   declarations: [
-    Login,
-    Cadastrar
+    LoginComponent,
+    CadastrarComponent
   ],
   imports: [
     CommonModule,

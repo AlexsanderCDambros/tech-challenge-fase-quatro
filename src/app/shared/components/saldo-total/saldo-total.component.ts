@@ -10,11 +10,11 @@ import { CurrencyPipe } from '@angular/common';
     MatCardModule,
     CurrencyPipe
   ],
-  templateUrl: './saldo-total.html',
-  styleUrl: './saldo-total.scss',
+  templateUrl: './saldo-total.component.html',
+  styleUrl: './saldo-total.component.scss',
   standalone: true,
 })
-export class SaldoTotal {
+export class SaldoTotalComponent {
 
   private transacoesService = inject(TransacoesService);
   private contextoStore = inject(ContextoStore);

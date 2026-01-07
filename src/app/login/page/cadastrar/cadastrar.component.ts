@@ -1,15 +1,15 @@
 import { Component, signal } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UsuariosService } from '../../services/usuarios';
+import { UsuariosService } from '../../services/usuarios.service';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastrar',
-  templateUrl: './cadastrar.html',
-  styleUrl: './cadastrar.scss',
+  templateUrl: './cadastrar.component.html',
+  styleUrl: './cadastrar.component.scss',
   standalone: false
 })
-export class Cadastrar {
+export class CadastrarComponent {
 
   public form: FormGroup;
 

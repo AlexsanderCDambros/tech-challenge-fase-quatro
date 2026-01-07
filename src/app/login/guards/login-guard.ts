@@ -1,7 +1,6 @@
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
 import { ContextoStore } from '../../shared/stores/contexto-store';
-import { lastValueFrom } from 'rxjs';
 
 export const loginGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);

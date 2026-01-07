@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Usuario } from '../interfaces/usuario';
+import { IUsuario } from '../interfaces/usuario';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ContextoStore {
-  private usuario: BehaviorSubject<Usuario> = new BehaviorSubject<Usuario>({} as Usuario);
+  private usuario: BehaviorSubject<IUsuario> = new BehaviorSubject<IUsuario>({} as IUsuario);
 
-  public setUsuario(usuario: Usuario) {
+  public setUsuario(usuario: IUsuario) {
     this.usuario.next(usuario);
   }
 
@@ -20,13 +20,13 @@ export class ContextoStore {
     return this.usuario.getValue();
   }
 
-  public efetuarLogin(user: Usuario): void {
+  public efetuarLogin(user: IUsuario): void {
     this.setUsuario(user);
     sessionStorage.setItem('token', btoa(JSON.stringify(user)));
   }
 
   public efetuarLogout(): void {
-    this.setUsuario({} as Usuario);
+    this.setUsuario({} as IUsuario);
     sessionStorage.removeItem('token');
   }
 }

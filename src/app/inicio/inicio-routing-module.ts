@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Inicio } from './page/inicio/inicio';
-import { loginGuard } from '../login/guards/login-guard-guard';
+import { InicioComponent } from './page/inicio/inicio.component';
+import { loginGuard } from '../login/guards/login-guard';
 
 const routes: Routes = [
   {
     path: '',
-    component: Inicio,
+    component: InicioComponent,
     canActivate: [
       loginGuard
     ]
