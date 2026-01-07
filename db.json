@@ -19,7 +19,7 @@
       "tipo": "Receita",
       "metodo": "Transferência",
       "valor": 2000,
-      "data": "2026-01-01"
+      "data": "2026-01-01T03:00:00.000Z"
     },
     {
       "id": "af98",
@@ -28,7 +28,7 @@
       "tipo": "Despesa",
       "metodo": "Transferência",
       "valor": 800,
-      "data": "2026-01-10"
+      "data": "2026-01-10T03:00:00.000Z"
     },
     {
       "id": "af94",
@@ -37,7 +37,7 @@
       "tipo": "Receita",
       "metodo": "Transferência",
       "valor": 5000,
-      "data": "2026-01-01"
+      "data": "2026-01-01T03:00:00.000Z"
     },
     {
       "id": "af95",
@@ -46,7 +46,7 @@
       "tipo": "Despesa",
       "metodo": "Transferência",
       "valor": 1200,
-      "data": "2026-01-10"
+      "data": "2026-01-10T03:00:00.000Z"
     }
   ],
   "tiposTransacao": [

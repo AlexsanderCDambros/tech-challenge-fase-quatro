@@ -29,6 +29,10 @@ export class TransacoesService {
       );
   }
 
+  buscarTransacaoPorId(id: string): Observable<ITransacao> {
+    return this.http.get<ITransacao>(`${environment.apiUrl}/transacoes/${id}`);
+  }
+
   criarTransacao(transacao: ITransacao): Observable<ITransacao> {
     return this.http.post<ITransacao>(`${environment.apiUrl}/transacoes`, transacao);
   }
