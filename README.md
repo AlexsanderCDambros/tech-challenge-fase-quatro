@@ -12,43 +12,56 @@ Desenvolvido por Alexsander Chagas Dambros | [LinkedIn](https://www.linkedin.com
 
 ### Paradigmas
 
-1. **Dependency Injection (DI)**
+1. **Programação Orientada a Objetos (POO)**
+   - Estruturei toda a aplicação em classes e componentes com responsabilidades bem definidas.
+   - Implementei encapsulamento em serviços como `UsuariosService`, `TransacoesService` e `ContextoStore`, ocultando detalhes internos.
+   - Utilizei herança e composição para reutilizar código entre componentes e serviços.
+   - Isso facilita manutenção, reutilização e extensão do código.
+
+2. **Dependency Injection (DI)**
    - Utilizei o sistema robusto de injeção de dependências do Angular através do decorator `@Injectable` e da função `inject()`.
    - Implementei em todos os serviços (`UsuariosService`, `TransacoesService`, `ContextoStore`) com `providedIn: 'root'` para garantir instância única.
    - Isso reduz acoplamento entre classes e facilita testes unitários ao permitir mock de dependências.
 
-2. **Programação Reativa**
+3. **Programação Reativa**
    - Utilizei RxJS extensivamente com `Observable`, `BehaviorSubject` e operadores como `map()` e `pipe()`.
    - Implementei métodos como `getUsuario$()` no `ContextoStore` e `buscarTransacoesPorUsuario()` no `TransacoesService` que retornam observáveis.
    - Componentes como `SaldoTotalComponent` se inscrevem em observáveis usando `AsyncPipe` e `subscribe()`, criando fluxos de dados contínuos e auto-atualizáveis.
 
 ### Padrões de Projeto
 
-3. **Singleton**
+4. **Model-View-Whatever (MVW)**
+   - Implementei a arquitetura MVW própria do Angular com separação clara entre Model (serviços e interfaces), View (templates HTML) e Whatever (componentes TypeScript).
+   - O `ContextoStore` e os serviços funcionam como modelos que armazenam e manipulam dados.
+   - Os templates HTML (`*.component.html`) representam a visualização.
+   - Os componentes (`*.component.ts`) orquestram a lógica de interação entre model e view.
+   - Essa separação melhora testabilidade, manutenção e reutilização de código.
+
+5. **Singleton**
    - Forneci serviços e stores com `providedIn: 'root'`, garantindo uma única instância durante toda a aplicação.
    - Exemplo: `ContextoStore` gerencia o estado global do usuário de forma centralizada e única.
    - Economiza memória e garante consistência de dados em toda a aplicação.
 
-4. **Facade**
+6. **Facade**
    - Criei `ContextoStore` encapsulando a complexidade do `BehaviorSubject` interno, expondo apenas métodos simples: `efetuarLogin()`, `efetuarLogout()`, `getUsuario()` e `getUsuario$()`.
    - Forneci uma interface unificada para gerenciamento de autenticação e estado do usuário, abstraindo a complexidade da implementação interna.
 
-5. **Factory**
+7. **Factory**
    - Utilizei lazy loading no `app.routes.ts` com `loadChildren` e dynamic imports: `import('./inicioModule').then(m => m.InicioModule)`.
    - Carrego módulos de features sob demanda, reduzindo o tamanho do bundle inicial e melhorando performance de carregamento.
    - Exemplo: `InicioModule`, `LoginModule` e `TransacoesModule` são carregados apenas quando suas rotas são acessadas.
 
-6. **Observer**
+8. **Observer**
    - Implementei através do `BehaviorSubject` no `ContextoStore` e nos métodos dos serviços que retornam `Observable`.
    - Múltiplos componentes (`HeaderComponent`, `SaldoTotalComponent`, etc.) se inscrevem em observáveis para se manter sincronizados com mudanças de estado.
    - Isso permite que a aplicação reaja automaticamente a mudanças de dados sem acoplamento direto entre componentes.
 
-7. **Template Method**
+9. **Template Method**
    - Padronizei a estrutura de componentes com decorator `@Component`, `imports`, `templateUrl`, `styleUrl`, etc.
    - Tanto componentes standalone quanto baseados em módulos implementam a mesma "receita" de estrutura e ciclo de vida.
    - Isso promove consistência, facilita manutenção e permite que novos desenvolvedores entendam a estrutura rapidamente.
 
-8. **Adapter**
+10. **Adapter**
    - Integrei `Angular Material` como adaptador de componentes UI (MatCardModule, MatButtonModule, MatFormFieldModule, etc.).
    - Forneci uma interface uniforme para componentes visuais com comportamentos e estilos consistentes.
    - Exemplo: `MatButtonModule` padroniza botões em toda a aplicação com funcionalidades avançadas (ripple effects, acessibilidade, etc.).
