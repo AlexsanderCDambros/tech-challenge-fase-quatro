@@ -8,6 +8,53 @@ Desenvolvido por Alexsander Chagas Dambros | [LinkedIn](https://www.linkedin.com
 
 ---
 
+## Padrões de Projeto Utilizados
+
+### Paradigmas
+
+1. **Dependency Injection (DI)**
+   - Utilizei o sistema robusto de injeção de dependências do Angular através do decorator `@Injectable` e da função `inject()`.
+   - Implementei em todos os serviços (`UsuariosService`, `TransacoesService`, `ContextoStore`) com `providedIn: 'root'` para garantir instância única.
+   - Isso reduz acoplamento entre classes e facilita testes unitários ao permitir mock de dependências.
+
+2. **Programação Reativa**
+   - Utilizei RxJS extensivamente com `Observable`, `BehaviorSubject` e operadores como `map()` e `pipe()`.
+   - Implementei métodos como `getUsuario$()` no `ContextoStore` e `buscarTransacoesPorUsuario()` no `TransacoesService` que retornam observáveis.
+   - Componentes como `SaldoTotalComponent` se inscrevem em observáveis usando `AsyncPipe` e `subscribe()`, criando fluxos de dados contínuos e auto-atualizáveis.
+
+### Padrões de Projeto
+
+3. **Singleton**
+   - Forneci serviços e stores com `providedIn: 'root'`, garantindo uma única instância durante toda a aplicação.
+   - Exemplo: `ContextoStore` gerencia o estado global do usuário de forma centralizada e única.
+   - Economiza memória e garante consistência de dados em toda a aplicação.
+
+4. **Facade**
+   - Criei `ContextoStore` encapsulando a complexidade do `BehaviorSubject` interno, expondo apenas métodos simples: `efetuarLogin()`, `efetuarLogout()`, `getUsuario()` e `getUsuario$()`.
+   - Forneci uma interface unificada para gerenciamento de autenticação e estado do usuário, abstraindo a complexidade da implementação interna.
+
+5. **Factory**
+   - Utilizei lazy loading no `app.routes.ts` com `loadChildren` e dynamic imports: `import('./inicioModule').then(m => m.InicioModule)`.
+   - Carrego módulos de features sob demanda, reduzindo o tamanho do bundle inicial e melhorando performance de carregamento.
+   - Exemplo: `InicioModule`, `LoginModule` e `TransacoesModule` são carregados apenas quando suas rotas são acessadas.
+
+6. **Observer**
+   - Implementei através do `BehaviorSubject` no `ContextoStore` e nos métodos dos serviços que retornam `Observable`.
+   - Múltiplos componentes (`HeaderComponent`, `SaldoTotalComponent`, etc.) se inscrevem em observáveis para se manter sincronizados com mudanças de estado.
+   - Isso permite que a aplicação reaja automaticamente a mudanças de dados sem acoplamento direto entre componentes.
+
+7. **Template Method**
+   - Padronizei a estrutura de componentes com decorator `@Component`, `imports`, `templateUrl`, `styleUrl`, etc.
+   - Tanto componentes standalone quanto baseados em módulos implementam a mesma "receita" de estrutura e ciclo de vida.
+   - Isso promove consistência, facilita manutenção e permite que novos desenvolvedores entendam a estrutura rapidamente.
+
+8. **Adapter**
+   - Integrei `Angular Material` como adaptador de componentes UI (MatCardModule, MatButtonModule, MatFormFieldModule, etc.).
+   - Forneci uma interface uniforme para componentes visuais com comportamentos e estilos consistentes.
+   - Exemplo: `MatButtonModule` padroniza botões em toda a aplicação com funcionalidades avançadas (ripple effects, acessibilidade, etc.).
+
+---
+
 ## Instruções para baixar e rodar a aplicação
 
 Para poder rodar a aplicação você precisará ter instalado em sua máquina o node, que pode ser baixado em: [Link para baixar o Node](https://nodejs.org/)
